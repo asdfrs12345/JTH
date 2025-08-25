@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JSOU Temple Schedule</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <h2 id="widget-header">JSOU Temple Schedule</h2>
+
+  <div class="slider-wrapper">
+    <div id="slider-container">
+      <div class="slider-slides">
+
+        <!-- Weekday Card -->
+        <div class="slide" data-day="weekday">
+          <div class="schedule-card">
+            <img src="images/Border.png" alt="Border" class="frame-overlay" />
+            <h3>Monday – Friday</h3>
+            <ul>
+              <li><span><img src="images/Hands.png" class="icon" /> Temple Hours</span><span>7–11 AM & 4–6 PM</span></li>
+              <li><span><img src="images/Abishek.png" class="icon" /> Abhishek</span><span>9 AM</span></li>
+              <li><span><img src="images/Diya.png" class="icon" /> Aarti</span><span>5:30 PM</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Weekend Card -->
+        <div class="slide" data-day="weekend">
+          <div class="schedule-card">
+            <img src="images/Border.png" alt="Border" class="frame-overlay" />
+            <h3>Saturday & Sunday</h3>
+            <ul>
+              <li><span><img src="images/Hands.png" class="icon" /> Temple Hours</span><span>9 AM – 6 PM</span></li>
+              <li><span><img src="images/Abishek.png" class="icon" /> Abhishek</span><span>10 AM</span></li>
+              <li><span><img src="images/Diya.png" class="icon" /> Aarti</span><span>5:30 PM</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Donate Card -->
+        <div class="slide" data-day="donate">
+          <div class="schedule-card">
+            <img src="images/Border.png" alt="Border" class="frame-overlay" />
+            <h3>Support the Temple</h3>
+            <ul>
+              <li><span>💳 Square</span><span><a href="https://square.link/u/your-link" target="_blank">Donate</a></span></li>
+              <li><span>🏦 Zelle</span><span>temple@jsou.org</span></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="slider-dots">
+        <span class="dot" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/slider.js"></script>
+</body>
+</html>
