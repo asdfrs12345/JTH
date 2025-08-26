@@ -20,9 +20,18 @@
             <img src="images/Border.png" alt="Border" class="frame-overlay" />
             <h3>Monday – Friday</h3>
             <ul>
-              <li><span><img src="images/Hands.png" class="icon" /> Temple Hours</span><span>7–11 AM & 4–6 PM</span></li>
-              <li><span><img src="images/Abishek.png" class="icon" /> Abhishek</span><span>9 AM</span></li>
-              <li><span><img src="images/Diya.png" class="icon" /> Aarti</span><span>5:30 PM</span></li>
+              <li>
+                <span><img src="images/Hands.png" class="icon" /> Temple Hours</span>
+                <span>7–11 AM & 4–6 PM</span>
+              </li>
+              <li>
+                <span><img src="images/Abishek.png" class="icon" /> Abhishek</span>
+                <span>9 AM</span>
+              </li>
+              <li>
+                <span><img src="images/Diya.png" class="icon" /> Aarti</span>
+                <span>5:30 PM</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -33,9 +42,18 @@
             <img src="images/Border.png" alt="Border" class="frame-overlay" />
             <h3>Saturday & Sunday</h3>
             <ul>
-              <li><span><img src="images/Hands.png" class="icon" /> Temple Hours</span><span>9 AM – 6 PM</span></li>
-              <li><span><img src="images/Abishek.png" class="icon" /> Abhishek</span><span>10 AM</span></li>
-              <li><span><img src="images/Diya.png" class="icon" /> Aarti</span><span>5:30 PM</span></li>
+              <li>
+                <span><img src="images/Hands.png" class="icon" /> Temple Hours</span>
+                <span>9 AM – 6 PM</span>
+              </li>
+              <li>
+                <span><img src="images/Abishek.png" class="icon" /> Abhishek</span>
+                <span>10 AM</span>
+              </li>
+              <li>
+                <span><img src="images/Diya.png" class="icon" /> Aarti</span>
+                <span>5:30 PM</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -44,11 +62,36 @@
         <div class="slide" data-day="donate">
           <div class="schedule-card">
             <img src="images/Border.png" alt="Border" class="frame-overlay" />
+
             <h3>Support the Temple</h3>
-            <ul>
-              <li><span>💳 Square</span><span><a href="https://square.link/u/your-link" target="_blank">Donate</a></span></li>
-              <li><span>🏦 Zelle</span><span>temple@jsou.org</span></li>
-            </ul>
+
+            <!-- clickable Square / Zelle banner -->
+            <div class="donation-banner">
+              <a
+                href="https://checkout.square.site/merchant/ML3FGVZPH9E8R/checkout/3PQJQR32V6AAOWSTMNIK3DP7"
+                target="_blank"
+              >
+                <img
+                  src="images/Donation%20Text%20for%20Web.png"
+                  alt="Donate via Square or Zelle"
+                />
+              </a>
+            </div>
+
+            <!-- Zelle reveal -->
+            <div class="zelle-section">
+              <img
+                src="images/1bda36ae-32ec-b36f-2dcd-74a2ca75dea6.png"
+                alt="Zelle QR Code"
+                class="icon"
+              />
+              <span id="zelle-email">Click to reveal Zelle ID</span>
+            </div>
+
+            <!-- memo reminder -->
+            <p class="memo-reminder">
+              Please include in the memo what you are donating for and your email address.
+            </p>
           </div>
         </div>
 
@@ -63,5 +106,13 @@
   </div>
 
   <script src="js/slider.js"></script>
+  <script>
+    // Zelle ID reveal
+    document
+      .getElementById("zelle-email")
+      .addEventListener("click", function () {
+        this.textContent = "finance [at] jsou.org";
+      });
+  </script>
 </body>
 </html>
