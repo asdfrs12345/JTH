@@ -1,70 +1,49 @@
+/* Base page setup */
 body {
-  font-family: Arial, sans-serif;
-  background: #f7f7f7;
-  color: #333;
   margin: 0;
-  padding: 20px;
-  text-align: center;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
-#widget-header {
-  font-size: 1.5em;
-  color: #005b96;
-  margin-bottom: 20px;
+/* Donation banner */
+.donation-banner {
+  max-width: 600px;
+  margin: 0 auto 40px;
 }
 
-.slider-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-#slider-container {
-  width: 90%;
-  max-width: 400px;
-  position: relative;
-}
-
-.slider-slides {
-  position: relative;
-}
-
-.slide {
-  display: none;
-  animation: fadeIn 0.8s ease-in-out;
-}
-
-.slide.active {
+.donation-banner img {
   display: block;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-.schedule-card {
-  position: relative;
-  background: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  overflow: hidden;
-}
-
-.frame-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: auto;
-  z-index: -1;
-  opacity: 0.2;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+/* Schedule cards layout */
+.schedule-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Individual card styling */
+.schedule-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
 }
 
 .schedule-card h3 {
-  color: #005b96;
-  font-size: 1.3em;
+  margin-top: 0;
   margin-bottom: 12px;
+  color: #0077cc;
+  font-size: 1.25rem;
 }
 
 .schedule-card ul {
@@ -74,46 +53,10 @@ body {
 }
 
 .schedule-card li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
+  padding: 6px 0;
   border-bottom: 1px solid #eee;
 }
 
 .schedule-card li:last-child {
   border-bottom: none;
-}
-
-.schedule-card li span {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.icon {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-}
-
-.slider-dots {
-  text-align: center;
-  padding: 8px 0 16px;
-}
-
-.dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-  background: #bbb;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
-}
-
-.dot.active {
-  background: #005b96;
-  transform: scale(1.2);
 }
