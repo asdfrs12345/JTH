@@ -1,62 +1,53 @@
-/* Base page setup */
-body {
-  margin: 0;
-  padding: 40px 20px;
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
+/* ------------------------------------------------------------------------
+   Your existing slider, schedule-card, frame-overlay, icon, dot, etc.
+   styles should remain here. Do not remove them.
+   ------------------------------------------------------------------------ */
+
+/* =========================================================================
+   Added styles for the Donate slide
+   ========================================================================= */
+
+/* Donation banner inside schedule-card */
+.schedule-card .donation-banner {
+  margin: 16px 0;
+  text-align: center;
 }
 
-/* Donation banner */
-.donation-banner {
-  max-width: 600px;
-  margin: 0 auto 40px;
-}
-
-.donation-banner img {
-  display: block;
+.schedule-card .donation-banner img {
   width: 100%;
+  max-width: 300px;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
-/* Schedule cards layout */
-.schedule-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-  max-width: 900px;
-  margin: 0 auto;
+/* Zelle reveal row */
+.schedule-card .zelle-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 12px 0;
 }
 
-/* Individual card styling */
-.schedule-card {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+.schedule-card .zelle-section .icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
-.schedule-card h3 {
-  margin-top: 0;
-  margin-bottom: 12px;
+/* clickable email text */
+#zelle-email {
+  cursor: pointer;
   color: #0077cc;
-  font-size: 1.25rem;
+  text-decoration: underline;
+  font-weight: 500;
 }
 
-.schedule-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.schedule-card li {
-  padding: 6px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.schedule-card li:last-child {
-  border-bottom: none;
+/* memo reminder text */
+.schedule-card .memo-reminder {
+  font-size: 0.9rem;
+  color: #555555;
+  margin: 8px 0 0;
 }
