@@ -1,9 +1,9 @@
 /* =========================================================================
-   Full styles.css for JSOU Temple Schedule Widget
+   Full styles.css for JSOU Temple Schedule & Donate Widget
    ========================================================================= */
 
 /* Reset & Base Styles
-   ======================================================================== */
+   ========================================================================= */
 *,
 *::before,
 *::after {
@@ -13,7 +13,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 15px; /* base font size */
   scroll-behavior: smooth;
 }
 
@@ -22,27 +22,28 @@ body {
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   background-color: #f9f9f9;
   color: #333333;
-  line-height: 1.5;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
 }
 
 /* Widget Header
-   ======================================================================== */
+   ========================================================================= */
 #widget-header {
   text-align: center;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  margin: 24px 0;
+  margin: 20px 0;
   color: #2c3e50;
 }
 
 /* Slider Wrapper & Container
-   ======================================================================== */
+   ========================================================================= */
 .slider-wrapper {
-  max-width: 380px;
-  margin: 0 auto 40px;
+  max-width: 360px;
+  margin: 0 auto 30px;
   overflow: hidden;
   position: relative;
-  background-color: transparent;
 }
 
 #slider-container {
@@ -59,16 +60,17 @@ body {
 .slide {
   flex: 0 0 100%;
   max-width: 100%;
-  padding: 0 8px;
+  padding: 0 6px;
 }
 
-/* Schedule Card */
+/* Schedule Card
+   ========================================================================= */
 .schedule-card {
   position: relative;
   background-color: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 24px 16px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px 12px;
   text-align: center;
   overflow: hidden;
 }
@@ -86,32 +88,34 @@ body {
 
 /* Card Title */
 .schedule-card h3 {
-  font-size: 1.25rem;
-  font-weight: 500;
-  margin-bottom: 16px;
+  font-size: 1.125rem;
+  margin-bottom: 12px;
   color: #2c3e50;
+  line-height: 1.2;
 }
 
 /* List of Schedule Items */
 .schedule-card ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .schedule-card li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 12px 0;
-  font-size: 0.95rem;
+  margin: 10px 0;
+  font-size: 0.85rem;
   color: #444444;
 }
 
 /* Icon Next to Text */
 .schedule-card .icon {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
-  margin-right: 8px;
+  margin-right: 6px;
 }
 
 /* Text Span Wrappers */
@@ -123,14 +127,14 @@ body {
 /* Slider Navigation Dots */
 .slider-dots {
   text-align: center;
-  margin-top: 16px;
+  margin-top: 14px;
 }
 
 .slider-dots .dot {
   display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin: 0 6px;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
   background-color: #cccccc;
   border-radius: 50%;
   cursor: pointer;
@@ -141,21 +145,20 @@ body {
   background-color: #2c3e50;
 }
 
-/* =========================================================================
-   Donation Slide Additions
-   ======================================================================== */
+/* Donation Slide Additions
+   ========================================================================= */
 
 /* Donation Banner */
 .schedule-card .donation-banner {
-  margin: 16px 0;
+  margin: 14px 0;
   text-align: center;
 }
 
 .schedule-card .donation-banner img {
   width: 100%;
-  max-width: 300px;
+  max-width: 280px;
   height: auto;
-  border-radius: 6px;
+  border-radius: 5px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
@@ -165,14 +168,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  margin: 12px 0;
+  gap: 8px;
+  margin: 10px 0;
 }
 
 .schedule-card .zelle-section .icon {
-  width: 40px;
-  height: 40px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
+  margin-right: 0; /* icons are separate, no extra margin */
 }
 
 /* Click-to-Reveal Email */
@@ -180,30 +184,38 @@ body {
   cursor: pointer;
   color: #0077cc;
   text-decoration: underline;
+  font-size: 0.8rem;
   font-weight: 500;
 }
 
 /* Memo Reminder Text */
 .schedule-card .memo-reminder {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #555555;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
-/* =========================================================================
-   Responsive Adjustments
-   ======================================================================== */
-@media (max-width: 400px) {
-  .schedule-card {
-    padding: 20px 12px;
-  }
-
-  .schedule-card h3 {
-    font-size: 1.125rem;
+/* Responsive Tweaks
+   ========================================================================= */
+@media (max-width: 380px) {
+  html {
+    font-size: 14px;
   }
 
   #widget-header {
-    font-size: 1.5rem;
-    margin: 20px 0;
+    font-size: 1.3rem;
+    margin: 18px 0;
+  }
+
+  .schedule-card {
+    padding: 18px 10px;
+  }
+
+  .schedule-card h3 {
+    font-size: 1rem;
+  }
+
+  .slider-wrapper {
+    max-width: 320px;
   }
 }
