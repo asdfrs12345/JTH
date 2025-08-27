@@ -174,3 +174,24 @@ body {
   .schedule-card { padding: 18px 10px; }
   .schedule-card h3 { font-size: 1.125rem; }
 }
+
+/* ------------------------------------------------------------------------
+   Fix for decorative Border.png so it doesn’t get clipped
+   ------------------------------------------------------------------------ */
+
+/* Allow the overlay to extend beyond the card edges */
+.schedule-card {
+  overflow: visible;  
+}
+
+/* Push the overlay above the content and expand its size */
+.schedule-card .frame-overlay {
+  position: absolute;    /* ensure it stays positioned relative to the card */
+  top: -10px;            /* pull it up above the card’s top edge */
+  left: -10px;           /* pull it left of the card’s left edge */
+  width: calc(100% + 20px); 
+  height: calc(100% + 20px);
+  object-fit: cover;     /* fill the expanded area */
+  pointer-events: none;
+  z-index: 2;            /* float above all other card content */
+}
