@@ -65,7 +65,7 @@
 
             <h3>Support the Temple</h3>
 
-            <!-- Donation banner -->
+            <!-- Donation Banner -->
             <div class="donation-banner">
               <a
                 href="https://checkout.square.site/merchant/ML3FGVZPH9E8R/checkout/3PQJQR32V6AAOWSTMNIK3DP7"
@@ -78,8 +78,13 @@
               </a>
             </div>
 
-            <!-- Zelle reveal -->
+            <!-- Zelle Section -->
             <div class="zelle-section">
+              <img
+                src="images/ZelleLogo.png"
+                alt="Zelle Logo"
+                class="icon zelle-logo"
+              />
               <img
                 src="images/1bda36ae-32ec-b36f-2dcd-74a2ca75dea6.png"
                 alt="Zelle QR Code"
@@ -88,7 +93,7 @@
               <span id="zelle-email">Click to reveal Zelle ID</span>
             </div>
 
-            <!-- Memo reminder -->
+            <!-- Memo Reminder -->
             <p class="memo-reminder">
               Please include in the memo what you are donating for and your email address.
             </p>
@@ -108,11 +113,10 @@
   <script src="js/slider.js"></script>
   <script>
     // Zelle ID reveal
-    document
-      .getElementById("zelle-email")
-      .addEventListener("click", function () {
-        this.textContent = "finance [at] jsou.org";
-      });
+    document.getElementById("zelle-email").addEventListener("click", function () {
+      this.textContent = "finance [at] jsou.org";
+    });
   </script>
+
 </body>
 </html>
