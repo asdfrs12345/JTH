@@ -78,17 +78,13 @@
               </a>
             </div>
 
-            <!-- Zelle Section -->
+            <!-- Zelle Section (QR + reveal) -->
             <div class="zelle-section">
-              <img
-                src="images/ZelleLogo.png"
-                alt="Zelle Logo"
-                class="icon zelle-logo"
-              />
               <img
                 src="images/1bda36ae-32ec-b36f-2dcd-74a2ca75dea6.png"
                 alt="Zelle QR Code"
                 class="icon"
+                onerror="this.style.display='none';"
               />
               <span id="zelle-email">Click to reveal Zelle ID</span>
             </div>
@@ -102,6 +98,7 @@
 
       </div>
 
+      <!-- Navigation Dots -->
       <div class="slider-dots">
         <span class="dot" data-index="0"></span>
         <span class="dot" data-index="1"></span>
@@ -117,6 +114,5 @@
       this.textContent = "finance [at] jsou.org";
     });
   </script>
-
 </body>
 </html>
